@@ -3,7 +3,13 @@ export const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL;
 export async function fetchAllRecipes() {
   const res = await fetch(`${API_BASE_URL}/recipes`);
   if (!res.ok) throw new Error('Erro ao buscar receitas');
-  return res.json();
+  const data = await res.json();
+  if (data.meals) {
+    return data;
+  }
+  return {
+    meals: Array.isArray(data) ? data : [data]
+  };
 }
 
 export async function fetchRecipeById(id: string) {

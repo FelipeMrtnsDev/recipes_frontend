@@ -68,8 +68,6 @@ export default function Ingredients({ id }: { id: string }) {
           </div>
         )}
       </div>
-
-      {/* Seção de Ingredientes */}
       <div className="bg-black p-6 rounded-lg mb-8">
         <h2 className="text-2xl font-semibold mb-4 text-center">Ingredients</h2>
         <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2">
@@ -88,8 +86,6 @@ export default function Ingredients({ id }: { id: string }) {
           ))}
         </div>
       </div>
-
-      {/* Botão de Voltar */}
       <div className="mt-8 text-center">
         <Link href="/" className="inline-block px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">
           Back to Recipes

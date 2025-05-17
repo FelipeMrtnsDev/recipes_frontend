@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import { fetchAllRecipes } from "@/utils/api";
 
 interface Recipe {
   idMeal: string;
@@ -66,8 +67,3 @@ export default function Home() {
   );
 }
 
-export async function fetchAllRecipes() {
-  const res = await fetch('https://www.themealdb.com/api/json/v1/1/search.php?s=');
-  if (!res.ok) throw new Error('Failed to fetch recipes');
-  return res.json();
-}
