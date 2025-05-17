@@ -68,6 +68,9 @@ export default function Ingredients({ id }: { id: string }) {
           </div>
         )}
       </div>
+      <div className="flex justify-center w-full mb-4">
+        <p>From {recipe.strArea}</p>
+      </div>
       <div className="bg-black p-6 rounded-lg mb-8">
         <h2 className="text-2xl font-semibold mb-4 text-center">Ingredients</h2>
         <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2">
